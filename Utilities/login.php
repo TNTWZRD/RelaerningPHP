@@ -52,7 +52,7 @@ if($result->num_rows > 0){
         exit();
     }else{
         // USER Not In SYSTEM
-        //header("Location: /?login&loginError");
+        header("Location: /?login&loginError");
         mysqli_close($link);
         exit();
     }
@@ -61,7 +61,7 @@ if($result->num_rows > 0){
     exit();
 }else{
     // USER Not In SYSTEM
-    //header("Location: /?login&loginError");
+    header("Location: /?login&loginError");
     mysqli_close($link);
     exit();
 }

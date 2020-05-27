@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Relearning PHP Social Media</title>
+    <title>TheTechSocial</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/?news">News</a>
+                    <a class="nav-link" href="/?newsfeed">News Feed</a>
                 </li>
                 <?php if(!isset($_SESSION['LOGGEDIN']) || $_SESSION['LOGGEDIN'] == false ){ ?>
                     <li class="nav-item">
@@ -38,21 +38,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="?logout">Logout</a>
                     </li>
+                    <li class="nav-item nav-item-right">
+                        <a class="nav-link" href="/?user=<?php echo $_SESSION['USER']['Username']; ?>" ><?php echo $_SESSION['USER']['Username']; ?></a>
+                    </li>
                 <?php } ?>
             </ul>
         </div>
     </nav>
 
     <main role="main" class="container">
-
-    <div class="starter-template">
         <?php 
             $PageURL = 'Pages/' . array_key_first($_GET) . '.php';
             if(file_exists($PageURL)) include($PageURL);
             else include('ERROR/404.php'); 
         ?>
-    </div>
-
     </main><!-- /.container -->
 </body>
 </html>
