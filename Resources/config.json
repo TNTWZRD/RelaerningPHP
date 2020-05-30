@@ -1,7 +1,9 @@
 {
     "MYSQL":{
-        "Database":"TheTechSocial",
-        "Username":"TheTechSocial",
-        "Password":"Fashion_Economics_Development:{300"
+        "Host":["localhost", "pve.jajliardo.com"],
+        "Database":"thetechsocial",
+        "Username":"TheTechSocial_USER",
+        "Password":"Fashion_Economics_Development:{300",
+        "USEHost":1
     }
 }

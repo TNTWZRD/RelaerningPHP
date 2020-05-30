@@ -8,7 +8,7 @@ $string = file_get_contents('..\Resources\config.json');
 $CONFIG = json_decode($string, true);
 
 // Create Mysql Connection
-$link = mysqli_connect('localhost', $CONFIG['MYSQL']['Username'], $CONFIG['MYSQL']['Password'], $CONFIG['MYSQL']['Database']);
+$link = mysqli_connect($CONFIG['MYSQL']['Host'][$CONFIG['MYSQL']['USEHost']], $CONFIG['MYSQL']['Username'], $CONFIG['MYSQL']['Password'], $CONFIG['MYSQL']['Database']);
 
 // Check for errors
 if (!$link) {

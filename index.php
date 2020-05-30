@@ -1,7 +1,12 @@
 
 <!doctype html>
 
-<?php include('Utilities/session.php'); ?>
+<?php 
+    // Set Session
+    include('Utilities/session.php'); 
+    // If no ?LOCATION Set to HOME
+    if(!array_key_first($_GET)) header("Location: /?home");
+?>
 
 <html lang="en">
 
