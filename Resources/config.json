@@ -1,6 +1,6 @@
 {
     "MYSQL":{
-        "Host":["localhost", "pve.jajliardo.com"],
+        "Host":"pve.jajliardo.com",
         "Database":"thetechsocial",
         "Username":"TheTechSocial_USER",
         "Password":"Fashion_Economics_Development:{300",

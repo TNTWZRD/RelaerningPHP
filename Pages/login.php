@@ -1,3 +1,8 @@
+<?php
+if(isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] != false){
+    header("Location: ?home&alreadyLoggedin");
+}
+?>
 <form class="form-signin" action="/Utilities/login.php" method="post">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address / Username</label>

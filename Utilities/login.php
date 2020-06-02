@@ -1,14 +1,13 @@
 <?php
-
 session_start();
-session_regenerate_id();
+session_regenerate_id(true);
 
 // Get MYSQL Settings from config.json
 $string = file_get_contents('..\Resources\config.json');
 $CONFIG = json_decode($string, true);
 
 // Create Mysql Connection
-$link = mysqli_connect($CONFIG['MYSQL']['Host'][$CONFIG['MYSQL']['USEHost']], $CONFIG['MYSQL']['Username'], $CONFIG['MYSQL']['Password'], $CONFIG['MYSQL']['Database']);
+$link = mysqli_connect($CONFIG['MYSQL']['Host'], $CONFIG['MYSQL']['Username'], $CONFIG['MYSQL']['Password'], $CONFIG['MYSQL']['Database']);
 
 // Check for errors
 if (!$link) {
